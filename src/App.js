@@ -12,4 +12,9 @@ function App() {
   // Part 3.1: Store the selected category in state 
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+  // Handle category selection
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
 export default App;
