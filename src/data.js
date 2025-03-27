@@ -29,6 +29,9 @@ const priceList = data.map(item => ({
   price: `${item.price.toFixed(2)}`
 }));
 
+// Stretch Challenge 2: Expensive products (more than $50)
+const expensiveProducts = data.filter(item => item.price > 50);
+
 // Export the data and processed results
 export default data;
 export {
@@ -36,4 +39,5 @@ export {
   categoryCounts,
   categoriesWithCounts,
   priceList,
+  expensiveProducts,
 };
