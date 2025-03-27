@@ -37,6 +37,18 @@ const totalInventoryValue = data.reduce((total, item) => {
   return total + (item.price * item.units);
 }, 0);
 
+// Stretch Challenge 4: Total price of products in each category
+const categoryTotalPrices = data.reduce((acc, item) => {
+  const { category, price, units } = item;
+  const itemTotal = price * units;
+  
+  // If category exists in accumulator, add to its total
+  // Otherwise, initialize it with the current item's total
+  acc[category] = (acc[category] || 0) + itemTotal;
+  
+  return acc;
+}, {});
+
 // Export the data and processed results
 export default data;
 export {
@@ -46,4 +58,5 @@ export {
   priceList,
   expensiveProducts,
   totalInventoryValue,
+  categoryTotalPrices
 };
