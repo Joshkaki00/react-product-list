@@ -14,9 +14,19 @@ const categoryCounts = allCategories.reduce((acc, category) => {
   return acc;
 }, {});
 
+// Part 1.4: Create a list of objects with name and count
+const categoriesWithCounts = Object.keys(categoryCounts).map(name => ({
+  name,
+  count: categoryCounts[name]
+}));
+
+// Sort categories alphabetically for better presentation
+categoriesWithCounts.sort((a, b) => a.name.localeCompare(b.name));
+
 // Export the data and processed results
 export default data;
 export {
   uniqueCategories,
   categoryCounts,
+  categoriesWithCounts,
 };
