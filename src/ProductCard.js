@@ -13,5 +13,10 @@ function ProductCard({ product }) {
   for (let i = 0; i < fullStars; i++) {
     stars.push(<span key={`full-${i}`} className="star filled">★</span>);
   }
-
+  
+  // Add half star if needed
+  if (hasHalfStar) {
+    stars.push(<span key="half" className="star half-filled">★</span>);
+  }
+  
 export default ProductCard;
