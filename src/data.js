@@ -23,10 +23,17 @@ const categoriesWithCounts = Object.keys(categoryCounts).map(name => ({
 // Sort categories alphabetically for better presentation
 categoriesWithCounts.sort((a, b) => a.name.localeCompare(b.name));
 
+// Stretch Challenge 1: Price list with formatted prices
+const priceList = data.map(item => ({
+  name: item.name,
+  price: `${item.price.toFixed(2)}`
+}));
+
 // Export the data and processed results
 export default data;
 export {
   uniqueCategories,
   categoryCounts,
   categoriesWithCounts,
+  priceList,
 };
