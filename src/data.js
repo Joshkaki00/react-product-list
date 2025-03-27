@@ -32,6 +32,11 @@ const priceList = data.map(item => ({
 // Stretch Challenge 2: Expensive products (more than $50)
 const expensiveProducts = data.filter(item => item.price > 50);
 
+// Stretch Challenge 3: Calculate total inventory value
+const totalInventoryValue = data.reduce((total, item) => {
+  return total + (item.price * item.units);
+}, 0);
+
 // Export the data and processed results
 export default data;
 export {
@@ -40,4 +45,5 @@ export {
   categoriesWithCounts,
   priceList,
   expensiveProducts,
+  totalInventoryValue,
 };
