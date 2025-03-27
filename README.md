@@ -71,10 +71,5 @@ The raw product data used in the application.
 - Node.js
 - CSS for styling
 
-## Future Enhancements
-- Add search functionality to filter products by name.
-- Implement pagination for large datasets.
-- Add animations for sorting and filtering transitions.
-
 ## License
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software under the terms of the license.
