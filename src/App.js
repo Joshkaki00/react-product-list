@@ -17,4 +17,9 @@ function App() {
     setSelectedCategory(category);
   };
 
+  // Part 3.2: Filter products based on selected category
+  const filteredProducts = selectedCategory === 'All' 
+    ? data 
+    : data.filter(item => item.category === selectedCategory);
+
 export default App;
