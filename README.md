@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# React Product List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based product inventory application that allows users to filter, sort, and view product data dynamically. It demonstrates key React concepts such as state management, component composition, and data manipulation.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 1. **Category Filtering**
+- Users can filter products by category using dynamically generated category buttons.
+- An "All" button is available to reset the filter and display all products.
 
-### `npm start`
+### 2. **Sorting**
+- Products can be sorted by various fields such as:
+    - ID
+    - Name
+    - Price
+    - Rating
+    - Units
+- Sorting can be toggled between ascending and descending order.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. **Dynamic Statistics**
+- Displays dynamic statistics based on the current product view:
+    - Total categories
+    - Total products
+    - Available units
+    - Inventory value
+    - Average rating
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. **Product Cards**
+- Each product is displayed as a card with details such as name, price, rating, and units.
 
-### `npm test`
+## File Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `/src/App.js`
+The main application file that:
+- Manages state for selected category, sorting field, and sorting direction.
+- Filters and sorts product data dynamically.
+- Renders the UI, including category buttons, sort controls, and product cards.
 
-### `npm run build`
+### `/src/data.js`
+Processes and exports product data:
+- Extracts unique categories.
+- Counts products per category.
+- Calculates total inventory value and other statistics.
+- Provides utility data such as expensive products and category-wise totals.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `/src/data.json`
+The raw product data used in the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+     ```bash
+     git clone <repository-url>
+     ```
+2. Navigate to the project directory:
+     ```bash
+     cd react-product-list
+     ```
+3. Install dependencies:
+     ```bash
+     npm install
+     ```
+4. Start the development server:
+     ```bash
+     npm start
+     ```
+5. Open the application in your browser at `http://localhost:3000`.
 
-### `npm run eject`
+## Dependencies
+- React
+- Node.js
+- CSS for styling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future Enhancements
+- Add search functionality to filter products by name.
+- Implement pagination for large datasets.
+- Add animations for sorting and filtering transitions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute this software under the terms of the license.
