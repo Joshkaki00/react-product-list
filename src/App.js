@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import CategoryButton from './CategoryButton';
+import ProductCard from './ProductCard';
+import data, { 
+  uniqueCategories, 
+  categoriesWithCounts, 
+  totalInventoryValue 
+} from './data';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  // Part 3.1: Store the selected category in state 
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
 export default App;
