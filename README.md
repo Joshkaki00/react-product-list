@@ -77,4 +77,4 @@ The raw product data used in the application.
 - Add animations for sorting and filtering transitions.
 
 ## License
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute this software under the terms of the license.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software under the terms of the license.
