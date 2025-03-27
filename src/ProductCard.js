@@ -8,5 +8,10 @@ function ProductCard({ product }) {
   const stars = [];
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
+  
+  // Add full stars
+  for (let i = 0; i < fullStars; i++) {
+    stars.push(<span key={`full-${i}`} className="star filled">★</span>);
+  }
 
 export default ProductCard;
